@@ -11,6 +11,7 @@
             <th>Fecha Nacimiento</th>
             <th>Sexo</th>
             <th>NSS</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,8 @@
                 <td>@enfermo.FechaNac.ToShortDateString()</td>
                 <td>@enfermo.Sexo</td>
                 <td>@enfermo.NSS</td>
+                <td><a asp-controller="Enfermos" asp-action="Details" asp-route-inscripcion="@enfermo.Inscripcion">Details</a></td>
+                <td><a asp-controller="Enfermos" asp-action="Delete" asp-route-inscripcion="@enfermo.Inscripcion">Delete</a></td>
             </tr>
         }
     </tbody>

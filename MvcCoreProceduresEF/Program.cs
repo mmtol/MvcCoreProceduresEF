@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
+using MvcCoreProceduresEF.Controllers;
 using MvcCoreProceduresEF.Data;
 using MvcCoreProceduresEF.Repositories;
 
@@ -9,8 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<RepositoryEnfermos>();
+builder.Services.AddTransient<RepositoryEmpleados>();
 string connString = builder.Configuration.GetConnectionString("SqlConnection");
 builder.Services.AddDbContext<EnfermosContext>(options => options.UseSqlServer(connString));
+builder.Services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connString));
 
 var app = builder.Build();
 

@@ -58,6 +58,16 @@ namespace MvcCoreProceduresEF.Repositories
 
     #endregion
 
+    #region VIEWS
+    //    create view V_EMPLEADOS_DEPARTAMENTOS
+    //as
+    //	select isnull(
+    //    ROW_NUMBER() over (order by EMP.APELLIDO), 0) as ID,
+    //	EMP.APELLIDO, EMP.OFICIO, EMP.SALARIO, DEPT.DNOMBRE AS DEPARTAMENTO, DEPT.LOC as LOCALIIDAD
+    //    from EMP inner join DEPT on EMP.DEPT_NO = DEPT.DEPT_NO
+    //go
+    #endregion
+
     public class RepositoryEnfermos
     {
         private EnfermosContext context;

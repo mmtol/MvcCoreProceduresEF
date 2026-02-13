@@ -8,5 +8,6 @@ namespace MvcCoreProceduresEF.Data
         public HospitalContext(DbContextOptions<HospitalContext> options) : base(options) { }
 
         public DbSet<VistaEmpleado> VistaEmpleados { get; set; }
+        public DbSet<Trabajador> Trabajadores { get; set; }
     }
 }
